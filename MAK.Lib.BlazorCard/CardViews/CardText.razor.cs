@@ -2,13 +2,18 @@
 
 using Interfaces;
 
+using Microsoft.AspNetCore.Components;
+
 namespace MAK.Lib.BlazorCard.CardViews
 {
     public partial class CardText<TEntity> : ContainerChildElement<ICardBody<TEntity>>
     {
         protected override void Register(ICardBody<TEntity> parent) => parent.AddText(this);
 
-        protected override string ContainerCssClass => "card_text";
+        [Parameter]
+        public string Css { get; set; }
+
+        protected override string ContainerCssClass => Css;
         protected override ElementType ContainerChildElementType => ElementType.P;
     }
 }
