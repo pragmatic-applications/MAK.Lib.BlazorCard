@@ -1,0 +1,10 @@
+﻿@namespace Views
+
+@typeparam TEntity
+
+@inherits ChildElement<ICard<TEntity>>
+@implements ICardBody<TEntity>
+
+<CascadingValue Value=this>
+    @ChildContent
+</CascadingValue>
