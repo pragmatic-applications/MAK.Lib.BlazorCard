@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
+        <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
+        <!-- <Nullable>enable</Nullable> -->
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.0.0.3</Version>
-        <AssemblyVersion>0.0.0.3</AssemblyVersion>
-        <FileVersion>0.0.0.3</FileVersion>
+        <Version>0.0.0.4</Version>
+        <AssemblyVersion>0.0.0.4</AssemblyVersion>
+        <FileVersion>0.0.0.4</FileVersion>
         <RepositoryUrl>https://github.com/pragmatic-applications/MAK.Lib.BlazorCard</RepositoryUrl>
-        <Authors>Maurice Antonio Kelly @MAKMaurice</Authors>
+        <Authors>Maurice Antonio Kelly</Authors>
         <Company>Pragmatic Applications</Company>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Description>BlazorCard is a Blazor RCL that uses Generics for its Type. It uses CSS Grid for the layout feature; the layout and styling can be changed by providing CSS classes to the provided Parameters.</Description>
@@ -17,22 +17,28 @@
         <PackageTags>A Blazor RCL Card that uses CSS Grid.</PackageTags>
         <RepositoryType>A Blazor RCL Card that uses CSS Grid.</RepositoryType>
         <Copyright>Pragmatic Applications - Maurice Antonio Kelly @MAKMaurice</Copyright>
+        <Configurations>Release</Configurations>
     </PropertyGroup>
 
-    <ItemGroup>
-      <None Remove="docs\Record.txt" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Include="docs\Record.txt" />
-    </ItemGroup>
-
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+      <DebugSymbols>true</DebugSymbols>
+      <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
     <ItemGroup>
         <SupportedPlatform Include="browser" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.2" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Remove="**\.DS_Store" />
+        <Content Remove="**\Thumbs.db" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="**\.DS_Store" />
+        <None Remove="**\Thumbs.db" />
+    </ItemGroup>
 </Project>

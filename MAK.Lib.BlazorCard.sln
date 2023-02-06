@@ -11,8 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A4E786D6-F608-482B-8480-0A35A18533B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4E786D6-F608-482B-8480-0A35A18533B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4E786D6-F608-482B-8480-0A35A18533B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4E786D6-F608-482B-8480-0A35A18533B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
@@ -21,5 +19,18 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B192F52-E466-43EE-9454-D9385A34361E}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.SpaceAfterControlFlowStatementKeyword = False
+		$3.WrappingPreserveSingleLine = False
+		$3.WrappingKeepStatementsOnSingleLine = False
+		$3.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal
